@@ -14,7 +14,7 @@ fries.addToList();
 var beer = new words.WordObj("beer");
 beer.addToList();
 
-var iceCream = new words.WordObj("ice cream");
+var iceCream = new words.WordObj("brownies");
 iceCream.addToList();
 
 var cookies = new words.WordObj("cookies");
@@ -37,7 +37,3 @@ function LetterObj(word){
 
 module.exports = {wordsList: words.wordsList,
 	LetterObj: LetterObj}
-
-// var test = new LetterObj("test");
-// test.createBlanks();
-// console.log(test.blanksAndSuccesses.join(", "));

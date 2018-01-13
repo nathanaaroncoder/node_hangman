@@ -72,6 +72,8 @@ function guess(){
 					if(answer.winAgain){
 						chooseWord();
 						guess();
+						guessesLeft = 0;
+						wrongGuesses = [];
 					}
 					else{
 						return console.log("\nThanks for playing!\n");
@@ -100,7 +102,6 @@ function guess(){
 		    	guess();
 			}
 			else {
-				console.log("\nYou lose.\n")
 				lose = true;
 				inquirer.prompt([
 				{
@@ -113,6 +114,8 @@ function guess(){
 					if(answer.loseAgain){
 						chooseWord();
 						guess();
+						guessesLeft = 0;
+						wrongGuesses = [];
 					}
 					else{
 						return console.log("\nThanks for playing!\n");
