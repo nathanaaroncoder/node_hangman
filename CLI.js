@@ -72,7 +72,7 @@ function guess(){
 					if(answer.winAgain){
 						chooseWord();
 						guess();
-						guessesLeft = 0;
+						guessesLeft = 12;
 						wrongGuesses = [];
 					}
 					else{
@@ -89,7 +89,7 @@ function guess(){
 
 
 		    if(wrongGuesses.indexOf(user.guess) < 0){
-		    	console.log(`\nSorry. ${user.guess} is not in this word.\n`);
+		    	console.log(`\nSorry, ${user.guess} is not in this word.\n`);
 		    	wrongGuesses.push(user.guess);
 		    	guessesLeft--;
 		    }
@@ -114,7 +114,7 @@ function guess(){
 					if(answer.loseAgain){
 						chooseWord();
 						guess();
-						guessesLeft = 0;
+						guessesLeft = 12;
 						wrongGuesses = [];
 					}
 					else{
