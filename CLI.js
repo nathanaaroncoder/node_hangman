@@ -31,6 +31,7 @@ chooseWord();
 
 
 function guess(){
+
 	console.log(`\nYou have ${guessesLeft} guesses left.`);
 	console.log(`Your word: ${chosenWordBlanked.join("")}\n`)
 	inquirer.prompt([
@@ -70,10 +71,13 @@ function guess(){
 				}
 				]).then(function(answer){
 					if(answer.winAgain){
-						chooseWord();
-						guess();
 						guessesLeft = 12;
 						wrongGuesses = [];
+						chooseWord();
+						guess();
+						win = false;
+						lose = false;
+						
 					}
 					else{
 						return console.log("\nThanks for playing!\n");
@@ -112,10 +116,13 @@ function guess(){
 				}
 				]).then(function(answer){
 					if(answer.loseAgain){
-						chooseWord();
-						guess();
 						guessesLeft = 12;
 						wrongGuesses = [];
+						chooseWord();
+						guess();
+						win = false;
+						lose = false;
+						
 					}
 					else{
 						return console.log("\nThanks for playing!\n");
